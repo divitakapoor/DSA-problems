@@ -1,0 +1,11 @@
+def sortCharacterByFrequency(s):
+    freq_dict = {}
+    for char in s:
+        freq_dict[char] = freq_dict.get(char, 0) + 1
+    for i in range(len(s)):
+        for j in range(i + 1, len(s)):
+            if freq_dict[s[j]] > freq_dict[s[i]] or (freq_dict[s[j]] == freq_dict[s[i]] and s[j] < s[i]):
+                s = s[:i] + s[j] + s[i + 1:j] + s[i] + s[j + 1:]
+    return s
+s = "tree"
+print("Sorted string by frequency is:", sortCharacterByFrequency(s))

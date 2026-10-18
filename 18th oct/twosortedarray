@@ -1,0 +1,17 @@
+def merge(left, right):
+    result = []
+    i = j = 0
+    while i < len(left) and j < len(right):
+        if left[i] < right[j]:
+            result.append(left[i])
+            i += 1
+        else:
+            result.append(right[j])
+            j += 1
+    result.extend(left[i:])
+    result.extend(right[j:])
+    return result
+left = [1, 3, 5]   
+right= [2, 4, 6]
+merged_array = merge(left, right)
+print("Merged array:", merged_array)

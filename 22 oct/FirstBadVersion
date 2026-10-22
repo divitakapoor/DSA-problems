@@ -1,0 +1,14 @@
+def firstBadVersion(arr):
+    left = 0
+    right = len(arr) - 1
+
+    while left < right:
+        mid = (left + right) // 2
+        if arr[mid] == 1:  # Assuming 1 represents a bad version
+            right = mid
+        else:
+            left = mid + 1
+
+    return left if arr[left] == 1 else -1
+arr = [0, 0, 0, 1, 1, 1]
+print(firstBadVersion(arr))

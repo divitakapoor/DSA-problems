@@ -1,0 +1,30 @@
+def inversioncount(arr):
+    if len(arr) <= 1:
+        return arr, 0
+    mid = len(arr) // 2
+    left=arr[:mid]
+    right=arr[mid:]
+    left_sorted, left_inv = inversioncount(left)
+    right_sorted, right_inv = inversioncount(right) 
+    merged, split_inv = merge_and_count(left_sorted, right_sorted)
+    total_inv = left_inv + right_inv + split_inv  
+    return merged, total_inv
+def merge_and_count(left, right):
+    result = []
+    i = j = 0
+    inversions = 0
+    while i < len(left) and j < len(right):
+        if left[i] <= right[j]:
+            result.append(left[i])
+            i += 1
+        else:
+            result.append(right[j])
+            inversions += len(left) - i
+            j += 1
+    result.extend(left[i:])
+    result.extend(right[j:])
+    return result, inversions
+arr = [38, 27, 43, 3, 9, 82, 10]
+sorted_arr, inv_count = inversioncount(arr)
+print("Sorted array:", sorted_arr)
+print("Number of inversions:", inv_count)

@@ -1,0 +1,27 @@
+def checkinclusive(s1: str, s2: str) -> bool:
+    len_s1 = len(s1)
+    len_s2 = len(s2)
+    if len_s1 > len_s2:
+        return False
+    s1_count = [0] * 26
+    window_count = [0] * 26
+    for ch in s1:
+        s1_count[ord(ch) - ord('a')] += 1
+    for ch in s2[:len_s1]:
+        window_count[ord(ch) - ord('a')] += 1
+    if s1_count == window_count:
+        return True
+    for i in range(len_s1, len_s2):
+        start_char = s2[i - len_s1]
+        end_char = s2[i]
+        window_count[ord(end_char) - ord('a')] += 1
+        window_count[ord(start_char) - ord('a')] -= 1
+        if window_count[ord(start_char) - ord('a')] == 0:
+            del window_count[ord(start_char) - ord('a')]
+        if s1_count == window_count:
+            return True
+    return False
+s1 = "ab"
+s2 = "eidbaooo"
+result = checkinclusive(s1, s2)
+print(result)

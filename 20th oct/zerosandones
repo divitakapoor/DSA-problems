@@ -1,0 +1,15 @@
+def zerosandones(arr):
+    low=0
+    high=len(arr)-1
+    while low<high:
+        if arr[low]==0:
+            low+=1
+        elif arr[high]==1:
+            high-=1
+        else:
+            arr[low],arr[high]=arr[high],arr[low]
+            low+=1
+            high-=1
+    return arr
+arr=[0,1,0,1,1,0,0,1]
+print(zerosandones(arr))

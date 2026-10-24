@@ -46,9 +46,9 @@ Return an integer array `answer` containing the answers to all queries.
 ## Solution
 
 **Language:** Python  
-**Runtime:** 85 ms (beats 55.26%)  
-**Memory:** 29.9 MB (beats 63.16%)  
-**Submitted:** 2026-10-24T16:04:31.314Z  
+**Runtime:** 83 ms (beats 63.16%)  
+**Memory:** 29.9 MB (beats 68.42%)  
+**Submitted:** 2026-10-24T16:17:01.899Z  
 
 ```py
 class Solution(object):

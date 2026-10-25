@@ -5,7 +5,7 @@ class Solution(object):
         :rtype: int
         """
         low =0
-        high=len(nums)
+        high=len(nums)-1
         while low<high:
             mid=(low+high)//2
             if nums[mid]<nums[mid+1]:

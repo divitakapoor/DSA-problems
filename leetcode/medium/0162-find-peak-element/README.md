@@ -41,9 +41,9 @@ Explanation: Your function can return either index number 1 where the peak eleme
 ## Solution
 
 **Language:** Python  
-**Runtime:** 0 ms  
-**Memory:** 12.1 MB  
-**Submitted:** 2026-10-25T08:29:16.904Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 12.2 MB (beats 95.53%)  
+**Submitted:** 2026-10-25T11:04:07.583Z  
 
 ```py
 class Solution(object):
@@ -53,7 +53,7 @@ class Solution(object):
         :rtype: int
         """
         low =0
-        high=len(nums)
+        high=len(nums)-1
         while low<high:
             mid=(low+high)//2
             if nums[mid]<nums[mid+1]:

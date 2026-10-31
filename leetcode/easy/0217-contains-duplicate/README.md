@@ -44,9 +44,9 @@ All elements are distinct.
 ## Solution
 
 **Language:** Python  
-**Runtime:** 87 ms (beats 8.17%)  
-**Memory:** 28.6 MB (beats 6.99%)  
-**Submitted:** 2026-10-31T17:07:58.619Z  
+**Runtime:** 91 ms (beats 7.08%)  
+**Memory:** 28.7 MB (beats 6.99%)  
+**Submitted:** 2026-10-31T17:08:05.208Z  
 
 ```py
 class Solution(object):

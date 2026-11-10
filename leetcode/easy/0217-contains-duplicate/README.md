@@ -8,6 +8,8 @@ Given an integer array `nums`, return `true` if any value appears  **at least tw
 
  
 
+Original
+Python
  **Example 1:** 
 
  **Input:**  nums = [1,2,3,1]
@@ -44,9 +46,9 @@ All elements are distinct.
 ## Solution
 
 **Language:** Python  
-**Runtime:** 91 ms (beats 7.08%)  
-**Memory:** 28.7 MB (beats 6.99%)  
-**Submitted:** 2026-10-31T17:08:05.208Z  
+**Runtime:** 87 ms (beats 8.43%)  
+**Memory:** 28.7 MB (beats 7.25%)  
+**Submitted:** 2026-11-10T14:17:36.597Z  
 
 ```py
 class Solution(object):

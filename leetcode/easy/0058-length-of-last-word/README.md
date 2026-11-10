@@ -10,6 +10,8 @@ A  **word**  is a maximal substring consisting of non-space characters only.
 
  
 
+Original
+Python
  **Example 1:** 
 
 ```
@@ -48,9 +50,9 @@ Explanation: The last word is "joyboy" with length 6.
 ## Solution
 
 **Language:** Python  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 12.2 MB (beats 89.95%)  
-**Submitted:** 2026-11-01T17:18:06.259Z  
+**Runtime:** 0 ms  
+**Memory:** 12.1 MB  
+**Submitted:** 2026-11-10T14:17:51.557Z  
 
 ```py
 class Solution(object):
@@ -62,6 +64,7 @@ class Solution(object):
         ss=s.split()
         length=len(ss[-1])
         return length
+        
         
 ```
 
